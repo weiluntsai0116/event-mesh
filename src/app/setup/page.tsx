@@ -39,14 +39,13 @@ export default function SetupPage() {
     <div className="min-h-screen">
       <Navigation />
       
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          <h1 className="text-4xl font-light text-gray-900 mb-4">
             Set Up Your Profile
           </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Connect your social media profiles to help us understand your interests 
-            and find events that match your preferences.
+          <p className="text-lg text-gray-600">
+            Connect your social media profiles to discover events that match your interests.
           </p>
         </div>
 
@@ -61,7 +60,7 @@ export default function SetupPage() {
           <div className="mt-8 text-center">
             <div className="inline-flex items-center space-x-2 text-gray-600">
               <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-600"></div>
-              <span>Analyzing your social media profiles...</span>
+              <span>Analyzing your profiles...</span>
             </div>
           </div>
         )}

@@ -9,97 +9,63 @@ export default function HomePage() {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-6xl font-bold text-gray-900 mb-6">
-            Discover Events That
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
-              {" "}Match Your Interests
-            </span>
+      <section className="py-32 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-5xl sm:text-7xl font-light text-gray-900 mb-8">
+            Discover Events
+            <br />
+            <span className="text-blue-600">That Match You</span>
           </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Connect your social media profiles and let our AI analyze your interests to find 
-            the perfect events for you. From tech meetups to art exhibitions, we&apos;ll help you 
-            discover what matters to you.
+          <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
+            Connect your social media profiles and let AI find events that align with your interests.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <Link href="/setup">
-              <Button size="lg" className="text-lg px-8 py-3">
+              <Button size="lg" className="px-8 py-3">
                 Get Started
               </Button>
             </Link>
-            <Link href="/dashboard">
-              <Button variant="outline" size="lg" className="text-lg px-8 py-3">
-                View Demo
-              </Button>
-            </Link>
           </div>
         </div>
       </section>
+
+      {/* Divider */}
+      <div className="border-t border-gray-200 my-16"></div>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/50">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            How It Works
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="border-0 shadow-lg">
-              <CardHeader>
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                  <span className="text-2xl">📱</span>
-                </div>
-                <CardTitle>Connect Your Profiles</CardTitle>
-                <CardDescription>
-                  Simply provide your Instagram and LinkedIn handles. We&apos;ll analyze your posts, 
-                  connections, and interests to understand what drives you.
-                </CardDescription>
-              </CardHeader>
-            </Card>
+      <section className="py-24 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-12">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-6 mx-auto">
+                <span className="text-2xl">📱</span>
+              </div>
+              <h3 className="text-xl font-medium text-gray-900 mb-3">Connect</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Provide your Instagram and LinkedIn handles for analysis.
+              </p>
+            </div>
 
-            <Card className="border-0 shadow-lg">
-              <CardHeader>
-                <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
-                  <span className="text-2xl">🤖</span>
-                </div>
-                <CardTitle>AI Analysis</CardTitle>
-                <CardDescription>
-                  Our advanced LLM processes your social media activity to extract meaningful 
-                  patterns and interests, creating a comprehensive profile of your preferences.
-                </CardDescription>
-              </CardHeader>
-            </Card>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-6 mx-auto">
+                <span className="text-2xl">🤖</span>
+              </div>
+              <h3 className="text-xl font-medium text-gray-900 mb-3">Analyze</h3>
+              <p className="text-gray-600 leading-relaxed">
+                AI extracts your interests from social media activity.
+              </p>
+            </div>
 
-            <Card className="border-0 shadow-lg">
-              <CardHeader>
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                  <span className="text-2xl">🎯</span>
-                </div>
-                <CardTitle>Discover Events</CardTitle>
-                <CardDescription>
-                  Get personalized event recommendations based on your extracted interests. 
-                  From local meetups to major conferences, find events that truly matter to you.
-                </CardDescription>
-              </CardHeader>
-            </Card>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-6 mx-auto">
+                <span className="text-2xl">🎯</span>
+              </div>
+              <h3 className="text-xl font-medium text-gray-900 mb-3">Discover</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Get personalized event recommendations tailored to you.
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
-            Ready to Discover Your Perfect Events?
-          </h2>
-          <p className="text-xl text-gray-600 mb-8">
-            Join thousands of users who are already finding events that match their interests.
-          </p>
-          <Link href="/setup">
-            <Button size="lg" className="text-lg px-8 py-3">
-              Start Your Journey
-            </Button>
-          </Link>
         </div>
       </section>
     </div>

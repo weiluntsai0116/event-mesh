@@ -57,17 +57,16 @@ export function SocialMediaForm({ onSubmit, isProcessing }: SocialMediaFormProps
   };
 
   return (
-    <Card className="w-full max-w-md mx-auto">
-      <CardHeader>
-        <CardTitle className="text-2xl font-bold text-center">
+    <Card className="w-full max-w-lg mx-auto border-0 shadow-sm">
+      <CardHeader className="pb-6">
+        <CardTitle className="text-2xl font-light text-center">
           Connect Your Profiles
         </CardTitle>
         <CardDescription className="text-center">
-          Provide your social media handles so we can analyze your interests and find 
-          events that match your preferences.
+          Provide your social media handles to analyze your interests.
         </CardDescription>
       </CardHeader>
-      <CardContent>
+      <CardContent className="space-y-6">
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="space-y-2">
             <Label htmlFor="instagram">Instagram Handle</Label>
@@ -102,22 +101,6 @@ export function SocialMediaForm({ onSubmit, isProcessing }: SocialMediaFormProps
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="interests">Additional Interests (Optional)</Label>
-            <Textarea
-              id="interests"
-              placeholder="Tell us about your interests, hobbies, or topics you&apos;re passionate about. For example: &apos;I love machine learning, photography, and hiking. I&apos;m interested in tech startups and sustainable living.&apos;"
-              value={manualInterests}
-              onChange={(e) => setManualInterests(e.target.value)}
-              disabled={isProcessing}
-              rows={4}
-              className="resize-none"
-            />
-            <p className="text-xs text-gray-500">
-              This helps us provide more accurate event recommendations alongside your social media analysis.
-            </p>
-          </div>
-
-          <div className="space-y-2">
             <Label htmlFor="location">Location</Label>
             <select
               id="location"
@@ -144,6 +127,22 @@ export function SocialMediaForm({ onSubmit, isProcessing }: SocialMediaFormProps
             </p>
           </div>
 
+          <div className="space-y-2">
+            <Label htmlFor="interests">Additional Interests (Optional)</Label>
+            <Textarea
+              id="interests"
+              placeholder="Tell us about your interests, hobbies, or topics you&apos;re passionate about. For example: &apos;I love machine learning, photography, and hiking. I&apos;m interested in tech startups and sustainable living.&apos;"
+              value={manualInterests}
+              onChange={(e) => setManualInterests(e.target.value)}
+              disabled={isProcessing}
+              rows={4}
+              className="resize-none"
+            />
+            <p className="text-xs text-gray-500">
+              This helps us provide more accurate event recommendations alongside your social media analysis.
+            </p>
+          </div>
+
           {isProcessing && (
             <div className="space-y-2">
               <div className="flex items-center justify-between text-sm text-gray-600">
@@ -163,9 +162,9 @@ export function SocialMediaForm({ onSubmit, isProcessing }: SocialMediaFormProps
           </Button>
         </form>
 
-        <div className="mt-6 p-4 bg-blue-50 rounded-lg">
-          <h4 className="font-semibold text-blue-900 mb-2">What we analyze:</h4>
-          <ul className="text-sm text-blue-800 space-y-1">
+        <div className="mt-6 p-4 bg-gray-50 rounded-lg">
+          <h4 className="font-medium text-gray-900 mb-2">What we analyze:</h4>
+          <ul className="text-sm text-gray-600 space-y-1">
             <li>• Posts and captions you engage with</li>
             <li>• Professional connections and interests</li>
             <li>• Topics and hashtags you follow</li>

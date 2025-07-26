@@ -30,11 +30,11 @@ export function EventCard({ event }: EventCardProps) {
   };
 
   return (
-    <Card className="hover:shadow-lg transition-all duration-200">
-      <CardHeader className="pb-3">
-        <div className="flex items-start justify-between">
+    <Card className="border-0 shadow-sm hover:shadow-md transition-shadow">
+      <CardHeader className="pb-4">
+        <div className="flex items-start justify-between mb-2">
           <div className="flex-1">
-            <CardTitle className="text-lg mb-2">{event.title}</CardTitle>
+            <CardTitle className="text-lg font-medium mb-2">{event.title}</CardTitle>
             <Badge variant="secondary" className="text-xs">
               {event.category}
             </Badge>
@@ -45,7 +45,7 @@ export function EventCard({ event }: EventCardProps) {
         </div>
       </CardHeader>
       <CardContent className="space-y-4">
-        <p className="text-sm text-gray-600 line-clamp-2">
+        <p className="text-sm text-gray-600">
           {event.description}
         </p>
         
@@ -62,9 +62,9 @@ export function EventCard({ event }: EventCardProps) {
 
         <div className="flex items-center justify-between pt-2">
           <div className="flex items-center space-x-2">
-            <div className="flex-1 bg-gray-200 rounded-full h-2 w-20">
+            <div className="flex-1 bg-gray-200 rounded-full h-1.5 w-20">
               <div
-                className="bg-blue-600 h-2 rounded-full transition-all duration-300"
+                className="bg-blue-600 h-1.5 rounded-full transition-all duration-300"
                 style={{ width: `${event.relevanceScore * 100}%` }}
               />
             </div>

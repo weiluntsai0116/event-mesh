@@ -162,14 +162,14 @@ export default function DashboardPage() {
     <div className="min-h-screen">
       <Navigation />
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">
-            Your Personalized Dashboard
+        <div className="mb-12">
+          <h1 className="text-4xl font-light text-gray-900 mb-3">
+            Your Dashboard
           </h1>
-          <p className="text-gray-600">
-            Based on your social media analysis, here are your interests and recommended events.
+          <p className="text-lg text-gray-600">
+            Based on your social media analysis.
           </p>
           
           {/* Social Media Handles Display */}
@@ -200,50 +200,48 @@ export default function DashboardPage() {
             )}
           </div>
 
-          {/* Manual Interests Display */}
-          {manualInterests && (
-            <div className="mt-4">
-              <h3 className="text-sm font-medium text-gray-700 mb-2">Additional Interests:</h3>
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-3">
-                <p className="text-sm text-blue-800">{manualInterests}</p>
-              </div>
+          {/* Location Display */}
+          {location && (
+            <div className="mt-4 flex items-center space-x-2">
+              <span className="text-sm font-medium text-gray-700">Location:</span>
+              <span className="text-sm text-gray-600">📍 {location}</span>
             </div>
           )}
 
-          {/* Location Display */}
-          {location && (
-            <div className="mt-4">
-              <h3 className="text-sm font-medium text-gray-700 mb-2">Location:</h3>
-              <div className="bg-green-50 border border-green-200 rounded-lg p-3">
-                <p className="text-sm text-green-800">📍 {location}</p>
-              </div>
+          {/* Manual Interests Display */}
+          {manualInterests && (
+            <div className="mt-4 flex items-center space-x-2">
+              <span className="text-sm font-medium text-gray-700">Additional Interests:</span>
+              <span className="text-sm text-gray-600">{manualInterests}</span>
             </div>
           )}
         </div>
 
         {/* Tab Navigation */}
-        <div className="flex space-x-1 mb-8">
+        <div className="flex space-x-1 mb-12">
           <Button
             variant={activeTab === "interests" ? "default" : "outline"}
             onClick={() => setActiveTab("interests")}
+            className="font-medium"
           >
-            Your Interests ({mockInterests.length})
+            Interests ({mockInterests.length})
           </Button>
           <Button
             variant={activeTab === "events" ? "default" : "outline"}
             onClick={() => setActiveTab("events")}
+            className="font-medium"
           >
-            Recommended Events ({mockEvents.length})
+            Events ({mockEvents.length})
           </Button>
         </div>
 
         {/* Content */}
         {activeTab === "interests" && (
           <div>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-6">
-              Interests Extracted from Your Profiles
+            <h2 className="text-2xl font-light text-gray-900 mb-8">
+              Your Interests
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {mockInterests.map((interest) => (
                 <InterestCard key={interest.id} interest={interest} />
               ))}
@@ -253,10 +251,10 @@ export default function DashboardPage() {
 
         {activeTab === "events" && (
           <div>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-6">
-              Events Tailored to Your Interests
+            <h2 className="text-2xl font-light text-gray-900 mb-8">
+              Recommended Events
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {mockEvents.map((event) => (
                 <EventCard key={event.id} event={event} />
               ))}

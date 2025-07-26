@@ -20,12 +20,12 @@ export function InterestCard({ interest }: InterestCardProps) {
   };
 
   return (
-    <Card className="hover:shadow-md transition-shadow">
-      <CardHeader className="pb-3">
-        <div className="flex items-center justify-between">
-          <CardTitle className="text-lg">{interest.name}</CardTitle>
+    <Card className="border-0 shadow-sm hover:shadow-md transition-shadow">
+      <CardHeader className="pb-4">
+        <div className="flex items-center justify-between mb-2">
+          <CardTitle className="text-lg font-medium">{interest.name}</CardTitle>
           <Badge className={getConfidenceColor(interest.confidence)}>
-            {getConfidenceText(interest.confidence)} Confidence
+            {getConfidenceText(interest.confidence)}
           </Badge>
         </div>
         <Badge variant="secondary" className="text-xs">
@@ -34,20 +34,18 @@ export function InterestCard({ interest }: InterestCardProps) {
       </CardHeader>
       <CardContent>
         {interest.description && (
-          <p className="text-sm text-gray-600">{interest.description}</p>
+          <p className="text-sm text-gray-600 mb-4">{interest.description}</p>
         )}
-        <div className="mt-3">
-          <div className="flex items-center space-x-2">
-            <div className="flex-1 bg-gray-200 rounded-full h-2">
-              <div
-                className="bg-blue-600 h-2 rounded-full transition-all duration-300"
-                style={{ width: `${interest.confidence * 100}%` }}
-              />
-            </div>
-            <span className="text-xs text-gray-500">
-              {Math.round(interest.confidence * 100)}%
-            </span>
+        <div className="flex items-center space-x-2">
+          <div className="flex-1 bg-gray-200 rounded-full h-1.5">
+            <div
+              className="bg-blue-600 h-1.5 rounded-full transition-all duration-300"
+              style={{ width: `${interest.confidence * 100}%` }}
+            />
           </div>
+          <span className="text-xs text-gray-500">
+            {Math.round(interest.confidence * 100)}%
+          </span>
         </div>
       </CardContent>
     </Card>
