@@ -105,7 +105,7 @@ export function SocialMediaForm({ onSubmit, isProcessing }: SocialMediaFormProps
             <Label htmlFor="interests">Additional Interests (Optional)</Label>
             <Textarea
               id="interests"
-              placeholder="Tell us about your interests, hobbies, or topics you're passionate about. For example: 'I love machine learning, photography, and hiking. I'm interested in tech startups and sustainable living.'"
+              placeholder="Tell us about your interests, hobbies, or topics you&apos;re passionate about. For example: &apos;I love machine learning, photography, and hiking. I&apos;m interested in tech startups and sustainable living.&apos;"
               value={manualInterests}
               onChange={(e) => setManualInterests(e.target.value)}
               disabled={isProcessing}
