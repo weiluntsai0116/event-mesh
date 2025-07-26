@@ -56,58 +56,82 @@ const mockInterests: UserInterest[] = [
 
 const mockEvents: Event[] = [
   {
-    id: "1",
-    title: "AI & Machine Learning Summit 2024",
-    description: "Join industry leaders and researchers for a comprehensive exploration of the latest developments in AI and machine learning.",
-    date: "2024-03-15",
-    location: "San Francisco, CA",
-    category: "Technology",
+    eventId: "308405959",
+    eventName: "Patterns Seattle: An event for digital production and design system leaders",
+    eventDescription: "Patterns is a Knapsack-hosted summit for senior product, design, and engineering leaders and we'd love for you to be part of it. It's free to attend, with lunch and happy hour covered.",
+    eventType: "PHYSICAL",
+    date: "2025-09-18T11:00:00-07:00",
+    address: "TBD in Seattle, Seattle, WA, us",
+    eventUrl: "https://www.meetup.com/design-systems-community/events/308405959/",
+    organizedByGroup: "Knapsack Design Systems Leadership Community",
+    maxAttendees: null,
+    actualAttendees: 2,
     relevanceScore: 0.95
   },
   {
-    id: "2",
-    title: "Startup Networking Mixer",
-    description: "Connect with fellow entrepreneurs, investors, and startup enthusiasts in an intimate networking setting.",
-    date: "2024-03-20",
-    location: "New York, NY",
-    category: "Business",
+    eventId: "308405960",
+    eventName: "AI & Machine Learning Summit 2024",
+    eventDescription: "Join industry leaders and researchers for a comprehensive exploration of the latest developments in AI and machine learning.",
+    eventType: "PHYSICAL",
+    date: "2024-03-15T09:00:00-08:00",
+    address: "San Francisco Convention Center, San Francisco, CA, us",
+    eventUrl: "https://ai-summit-2024.com",
+    organizedByGroup: "AI Research Foundation",
+    maxAttendees: 500,
+    actualAttendees: 450,
+    relevanceScore: 0.92
+  },
+  {
+    eventId: "308405961",
+    eventName: "Startup Networking Mixer",
+    eventDescription: "Connect with fellow entrepreneurs, investors, and startup enthusiasts in an intimate networking setting.",
+    eventType: "PHYSICAL",
+    date: "2024-03-20T18:00:00-05:00",
+    address: "WeWork, New York, NY, us",
+    eventUrl: "https://startup-mixer-nyc.com",
+    organizedByGroup: "NYC Startup Community",
+    maxAttendees: 100,
+    actualAttendees: 85,
     relevanceScore: 0.87
   },
   {
-    id: "3",
-    title: "Web Development Conference",
-    description: "Learn about the latest trends in web development, from React to serverless architectures.",
-    date: "2024-03-25",
-    location: "Austin, TX",
-    category: "Technology",
+    eventId: "308405962",
+    eventName: "Web Development Conference",
+    eventDescription: "Learn about the latest trends in web development, from React to serverless architectures.",
+    eventType: "PHYSICAL",
+    date: "2024-03-25T10:00:00-06:00",
+    address: "Austin Convention Center, Austin, TX, us",
+    eventUrl: "https://webdev-conf-austin.com",
+    organizedByGroup: "Web Dev Community",
+    maxAttendees: 300,
+    actualAttendees: 275,
     relevanceScore: 0.82
   },
   {
-    id: "4",
-    title: "Design Thinking Workshop",
-    description: "Master the principles of design thinking and user-centered design methodologies.",
-    date: "2024-04-01",
-    location: "Seattle, WA",
-    category: "Design",
+    eventId: "308405963",
+    eventName: "Design Thinking Workshop",
+    eventDescription: "Master the principles of design thinking and user-centered design methodologies.",
+    eventType: "PHYSICAL",
+    date: "2024-04-01T09:00:00-08:00",
+    address: "Seattle Design Center, Seattle, WA, us",
+    eventUrl: "https://design-workshop-seattle.com",
+    organizedByGroup: "Design Innovation Lab",
+    maxAttendees: 50,
+    actualAttendees: 45,
     relevanceScore: 0.76
   },
   {
-    id: "5",
-    title: "Tech Innovation Meetup",
-    description: "Monthly meetup for tech enthusiasts to discuss emerging technologies and industry trends.",
-    date: "2024-03-28",
-    location: "Boston, MA",
-    category: "Innovation",
+    eventId: "308405964",
+    eventName: "Tech Innovation Meetup",
+    eventDescription: "Monthly meetup for tech enthusiasts to discuss emerging technologies and industry trends.",
+    eventType: "PHYSICAL",
+    date: "2024-03-28T19:00:00-05:00",
+    address: "Cambridge Innovation Center, Boston, MA, us",
+    eventUrl: "https://tech-meetup-boston.com",
+    organizedByGroup: "Boston Tech Community",
+    maxAttendees: 75,
+    actualAttendees: 68,
     relevanceScore: 0.84
-  },
-  {
-    id: "6",
-    title: "Professional Growth Summit",
-    description: "Develop your professional skills and expand your network with industry experts.",
-    date: "2024-04-05",
-    location: "Chicago, IL",
-    category: "Networking",
-    relevanceScore: 0.89
   }
 ];
 
@@ -256,7 +280,7 @@ export default function DashboardPage() {
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {mockEvents.map((event) => (
-                <EventCard key={event.id} event={event} />
+                <EventCard key={event.eventId} event={event} />
               ))}
             </div>
           </div>

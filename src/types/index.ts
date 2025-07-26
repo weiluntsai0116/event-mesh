@@ -12,13 +12,16 @@ export interface UserInterest {
 }
 
 export interface Event {
-  id: string;
-  title: string;
-  description: string;
+  eventId: string;
+  eventName: string;
+  eventDescription: string;
+  eventType: string;
   date: string;
-  location: string;
-  category: string;
-  imageUrl?: string;
+  address: string;
+  eventUrl: string;
+  organizedByGroup: string;
+  maxAttendees?: number | null;
+  actualAttendees?: number | null;
   relevanceScore: number;
 }
 

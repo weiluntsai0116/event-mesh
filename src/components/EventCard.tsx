@@ -34,9 +34,9 @@ export function EventCard({ event }: EventCardProps) {
       <CardHeader className="pb-4">
         <div className="flex items-start justify-between mb-2">
           <div className="flex-1">
-            <CardTitle className="text-lg font-medium mb-2">{event.title}</CardTitle>
+            <CardTitle className="text-lg font-medium mb-2">{event.eventName}</CardTitle>
             <Badge variant="secondary" className="text-xs">
-              {event.category}
+              {event.eventType}
             </Badge>
           </div>
           <Badge className={getRelevanceColor(event.relevanceScore)}>
@@ -46,7 +46,7 @@ export function EventCard({ event }: EventCardProps) {
       </CardHeader>
       <CardContent className="space-y-4">
         <p className="text-sm text-gray-600">
-          {event.description}
+          {event.eventDescription}
         </p>
         
         <div className="space-y-2">
@@ -56,7 +56,11 @@ export function EventCard({ event }: EventCardProps) {
           </div>
           <div className="flex items-center space-x-2 text-sm">
             <span className="text-gray-500">📍</span>
-            <span>{event.location}</span>
+            <span>{event.address}</span>
+          </div>
+          <div className="flex items-center space-x-2 text-sm">
+            <span className="text-gray-500">👥</span>
+            <span>{event.organizedByGroup}</span>
           </div>
         </div>
 
@@ -72,9 +76,15 @@ export function EventCard({ event }: EventCardProps) {
               {Math.round(event.relevanceScore * 100)}% match
             </span>
           </div>
-          <Button size="sm" variant="outline">
-            Learn More
-          </Button>
+          <a
+            href={event.eventUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button size="sm" variant="outline">
+              Learn More
+            </Button>
+          </a>
         </div>
       </CardContent>
     </Card>
