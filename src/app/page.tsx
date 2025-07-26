@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Navigation } from "@/components/Navigation";
 
 export default function HomePage() {
@@ -19,7 +19,7 @@ export default function HomePage() {
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
             Connect your social media profiles and let our AI analyze your interests to find 
-            the perfect events for you. From tech meetups to art exhibitions, we'll help you 
+            the perfect events for you. From tech meetups to art exhibitions, we&apos;ll help you 
             discover what matters to you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -51,7 +51,7 @@ export default function HomePage() {
                 </div>
                 <CardTitle>Connect Your Profiles</CardTitle>
                 <CardDescription>
-                  Simply provide your Instagram and LinkedIn handles. We'll analyze your posts, 
+                  Simply provide your Instagram and LinkedIn handles. We&apos;ll analyze your posts, 
                   connections, and interests to understand what drives you.
                 </CardDescription>
               </CardHeader>

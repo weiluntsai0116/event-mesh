@@ -140,7 +140,7 @@ export function SocialMediaForm({ onSubmit, isProcessing }: SocialMediaFormProps
               <option value="Other">Other</option>
             </select>
             <p className="text-xs text-gray-500">
-              We'll use this to find events near you.
+              We&apos;ll use this to find events near you.
             </p>
           </div>
 
