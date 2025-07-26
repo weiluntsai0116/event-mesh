@@ -2,7 +2,7 @@
 
 A modern web application that helps users discover events based on their social media interests using AI-powered analysis.
 
-## 🚀 Features
+## Features
 
 - **Social Media Integration**: Connect Instagram and LinkedIn profiles
 - **AI-Powered Analysis**: LLM backend extracts user interests from social media activity
@@ -10,7 +10,7 @@ A modern web application that helps users discover events based on their social 
 - **Modern UI**: Built with Next.js, Tailwind CSS, and shadcn/ui
 - **Responsive Design**: Works seamlessly on desktop and mobile devices
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Frontend**: Next.js 14 with App Router
 - **Styling**: Tailwind CSS
@@ -18,12 +18,12 @@ A modern web application that helps users discover events based on their social 
 - **Language**: TypeScript
 - **Package Manager**: pnpm
 
-## 📋 Prerequisites
+## Prerequisites
 
 - Node.js 18+ 
 - pnpm
 
-## 🚀 Getting Started
+## Getting Started
 
 1. **Clone the repository**
    ```bash
@@ -44,13 +44,13 @@ A modern web application that helps users discover events based on their social 
 4. **Open your browser**
    Navigate to [http://localhost:3000](http://localhost:3000)
 
-## 📱 Usage
+## Usage
 
 1. **Home Page**: Learn about Event Mesh and how it works
 2. **Setup Profile**: Enter your Instagram and LinkedIn handles
 3. **Dashboard**: View your extracted interests and recommended events
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 event-mesh/
@@ -72,7 +72,7 @@ event-mesh/
 └── package.json           # Dependencies and scripts
 ```
 
-## 🎯 Key Components
+## Key Components
 
 ### Social Media Form
 - Validates Instagram handles (must start with @)
@@ -89,7 +89,7 @@ event-mesh/
 - Displays event details (date, location, category)
 - Relevance matching indicators
 
-## 🔧 Development
+## Development
 
 ### Available Scripts
 
@@ -105,14 +105,8 @@ To add new shadcn/ui components:
 pnpm dlx shadcn@latest add <component-name>
 ```
 
-## 🎨 Design System
 
-- **Colors**: Blue and indigo gradient theme
-- **Typography**: Inter font family
-- **Components**: Consistent shadcn/ui design system
-- **Layout**: Responsive grid system with Tailwind CSS
-
-## 🔮 Future Enhancements
+## Future Enhancements
 
 - [ ] Real LLM backend integration
 - [ ] User authentication
@@ -121,11 +115,3 @@ pnpm dlx shadcn@latest add <component-name>
 - [ ] Advanced filtering and search
 - [ ] Event calendar integration
 - [ ] Push notifications for new events
-
-## 🤝 Contributing
-
-This is a hackathon project. Feel free to fork and extend the functionality!
-
-## 📄 License
-
-MIT License - feel free to use this project for your own hackathon or learning purposes.
