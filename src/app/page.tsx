@@ -29,11 +29,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Divider */}
-      <div className="border-t border-gray-200 my-16"></div>
-
       {/* Features Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8">
+      <section className="py-4 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-3 gap-12">
             <div className="text-center">
